@@ -127,5 +127,6 @@ ipw_did_panel <-function(y1, y0, D, covariates,
               se = se.att,
               uci = uci,
               lci = lci,
-              boots = ipw.boot))
+              boots = ipw.boot,
+              inf.func = att.inf.func))
 }
