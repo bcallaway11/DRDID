@@ -38,8 +38,9 @@ ipw_did_panel <-function(y1, y0, D, covariates,
   # generate deltaY
   deltaY <- as.vector(y1 - y0)
   # Add constant to covariate vector
-  int.cov <- as.matrix(cbind(1, covariates))
-
+  # int.cov <- as.matrix(cbind(1, covariates))
+  int.cov <- covariates
+    
   # Weights
   if(is.null(i.weights)) {
     i.weights <- as.vector(rep(1, n))
