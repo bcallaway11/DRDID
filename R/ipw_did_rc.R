@@ -41,8 +41,9 @@ ipw_did_rc <-function(y, post, D, covariates,
   # post as vector
   post <- as.vector(post)
   # Add constant to covariate vector
-  int.cov <- as.matrix(cbind(1, covariates))
-
+  # int.cov <- as.matrix(cbind(1, covariates))
+  int.cov <- covariates
+  
   # Weights
   if(is.null(i.weights)) {
     i.weights <- as.vector(rep(1, n))
@@ -171,5 +172,6 @@ ipw_did_rc <-function(y, post, D, covariates,
               se = se.att,
               uci = uci,
               lci = lci,
-              boots = ipw.boot))
+              boots = ipw.boot,
+              inf.func = att.inf.func))
 }

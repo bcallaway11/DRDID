@@ -39,8 +39,9 @@ drdid_rc <-function(y, post, D, covariates,
   # post as vector
   post <- as.vector(post)
   # Add constant to covariate vector
-  int.cov <- as.matrix(cbind(1, covariates))
-
+  #int.cov <- as.matrix(cbind(1, covariates))
+  int.cov <- covariates
+  
   # Weights
   if(is.null(i.weights)) {
     i.weights <- as.vector(rep(1, n))
