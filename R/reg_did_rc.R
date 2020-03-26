@@ -41,6 +41,7 @@ reg_did_rc <-function(y, post, D, covariates,
   # Add constant to covariate vector
   #int.cov <- as.matrix(cbind(1, covariates))
   int.cov <- covariates
+  
   # Weights
   if(is.null(i.weights)) {
     i.weights <- as.vector(rep(1, n))
@@ -162,5 +163,6 @@ reg_did_rc <-function(y, post, D, covariates,
               se = se.reg.att,
               uci = uci,
               lci = lci,
-              boots = reg.boot))
+              boots = reg.boot,
+              inf.func = reg.att.inf.func))
 }

@@ -268,5 +268,6 @@ drdid_rc <-function(y, post, D, covariates,
               se = se.dr.att,
               uci = uci,
               lci = lci,
-              boots = dr.boot))
+              boots = dr.boot,
+              inf.func = dr.inf.func))
 }
