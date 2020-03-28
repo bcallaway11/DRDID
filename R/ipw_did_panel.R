@@ -25,7 +25,7 @@ NULL
 #'
 #' @export
 
-ipw_did_panel <-function(y1, y0, G, C, covariates,
+ipw_did_panel <-function(y1, y0, D, covariates,
                          i.weights = NULL,
                          boot = F,
                          boot.type = "weighted",
